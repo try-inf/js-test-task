@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Кассеты банкомата</title>
+  <style>
+    input[type='submit'], button, [aria-label]{
+      cursor: pointer;
+    }
+    #spoiler{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<form action="javascript:void(0);" method="POST" onsubmit="app.AddNom()"> 
+  <input type="text" id="add-nom" placeholder="Введите номинал" 
+  onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+  <input type="submit" value="Добавить номинал">
+</form>
+
+<div id="spoiler" role="aria-hidden">
+  <form action="javascript:void(0);" method="POST" id="saveEdit">
+    <input type="text" id="edit" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+    <input type="submit" value="Изменить" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+  </form>
+</div>
+
+
+<table>
+  <tr>
+    <th>Разбивка кассет банкомата по номиналам</th>
+  </tr>
+    <tbody id="atms">
+    </tbody>
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
