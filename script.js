@@ -4,10 +4,10 @@
   this.banknotes = [1000, 1500, 500, 2000];
   this.Count = function(data) {
     var el   = document.getElementById('counter');
-    var name = 'ATM';
+    var name = 'Cassete';
     if (data) {
       if (data > 1) {
-        name = 'ATMs';
+        name = 'Cassetes';
       }
       el.innerHTML = data + ' ' + name ;
     } else {
@@ -36,6 +36,7 @@
         data += '</tr>';
         data += '<tr>' + '</tr>';
     }
+    this.Count(this.nominals.length);
     return this.el.innerHTML = data;
   };
   
@@ -109,8 +110,8 @@
     this.FetchAll();
   };  
 }
-app.FetchAll();
 
+app.FetchAll();
 function CloseInput() {
   document.getElementById('spoiler').style.display = 'none';
 }
