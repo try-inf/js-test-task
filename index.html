@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+п»ї<!DOCTYPE html>
 <html>
 <head>
-
-  <title>Кассеты банкомата</title>
+  <meta charset="UTF-8">
+  <title>РљР°СЃСЃРµС‚С‹ Р±Р°РЅРєРѕРјР°С‚Р°</title>
   <style>
     input[type='submit'], button, [aria-label]{
       cursor: pointer;
@@ -14,29 +14,31 @@
 </head>
 <body>
 
-<form action="javascript:void(0);" method="POST" onsubmit="app.AddNom()"> 
-  <input type="text" id="add-nom" placeholder="Введите номинал" 
+<form action="javascript:void(0);" method="POST" onsubmit="AddNom()"> 
+  <input type="text" id="add-nom" placeholder="Р’РІРµРґРёС‚Рµ РЅРѕРјРёРЅР°Р»" 
   onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-  <input type="submit" value="Добавить номинал">
+  <input type="submit" value="Р”РѕР±Р°РІРёС‚СЊ РЅРѕРјРёРЅР°Р»">
 </form>
 
 <div id="spoiler" role="aria-hidden">
   <form action="javascript:void(0);" method="POST" id="saveEdit">
     <input type="text" id="edit" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-    <input type="submit" value="Изменить" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+    <input type="submit" value="РР·РјРµРЅРёС‚СЊ" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
   </form>
 </div>
 
+<p id="counter"></p>
 
 <table>
   <tr>
-    <th>Разбивка кассет банкомата по номиналам</th>
+    <th>Р Р°Р·Р±РёРІРєР° РєР°СЃСЃРµС‚ Р±Р°РЅРєРѕРјР°С‚Р° РїРѕ РЅРѕРјРёРЅР°Р»Р°Рј</th>
   </tr>
     <tbody id="atms">
     </tbody>
 </table>
 
-<script src="script.js"></script>
+<script src="/js/app.js"></script>
+
 
 </body>
 </html>
